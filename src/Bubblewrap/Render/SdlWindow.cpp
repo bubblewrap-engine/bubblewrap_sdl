@@ -35,7 +35,7 @@ namespace Bubblewrap
 		{
 			// sfWindow_->clear(sf::Color( ClearColour_.R(), ClearColour_.G(), ClearColour_.B() ));
 			//Fill the surface white
-			SDL_FillRect( Surface_, NULL, SDL_MapRGB( Surface_->format, ClearColour_.R(), ClearColour_.G(), ClearColour_.B() ) );
+			//SDL_FillRect( Surface_, NULL, SDL_MapRGB( Surface_->format, ClearColour_.R(), ClearColour_.G(), ClearColour_.B() ) );
 		}
 
 		void SdlWindow::Display()
@@ -50,7 +50,12 @@ namespace Bubblewrap
 
 		void SdlWindow::HandleEvents()
 		{
-			/*sf::Event event;
+			SDL_Event event;
+			while ( SDL_PollEvent( &event ) )
+			{
+
+			}
+				/*sf::Event event;
 			while ( sfWindow_->pollEvent( event ) )
 			{
 				// sm->Input( event );
